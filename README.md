@@ -94,5 +94,10 @@ To run the script at boot as a systemd service, follow these steps:
 
    The script will run at boot automatically from now on.
 
+## NOTE: I have used LLM to refactor this script
+
+- This README has been created by an LLM based on the context of the script.
+- Also, the script was refactored and split into parts using LLM too.
+
 ## License:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
