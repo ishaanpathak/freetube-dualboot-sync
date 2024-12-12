@@ -1,4 +1,3 @@
-import logging
 import toml
 from config import check_config
 from sync import sync_files
