@@ -2,7 +2,7 @@ import os
 import subprocess
 import logging
 
-def check_directory(path, is_backup=False):
+def check_directory(path):
     """Check if a directory exists and is writable."""
     if not os.path.exists(path):
         send_notification("Directory Not Found", f"The directory {path} does not exist.")

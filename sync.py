@@ -12,7 +12,7 @@ def sync_files(dir1, dir2, filenames, backup_dir):
         file1 = os.path.join(dir1, filename)
         file2 = os.path.join(dir2, filename)
 
-        if not check_directory(dir1) or not check_directory(dir2) or not check_directory(backup_dir, is_backup=True):
+        if not check_directory(dir1) or not check_directory(dir2) or not check_directory(backup_dir):
             return  # Exit if directories are not valid
 
         if not os.path.exists(file1) or not os.path.exists(file2):

@@ -22,7 +22,7 @@ def check_config():
         with open(DEFAULT_CONFIG_PATH, "r") as config_file:
             config = toml.load(config_file)
         
-        if not check_directory(config['sync']['linux_dir']) or not check_directory(config['sync']['windows_dir']) or not check_directory(config['sync']['backup_dir'], is_backup=True):
+        if not check_directory(config['sync']['linux_dir']) or not check_directory(config['sync']['windows_dir']) or not check_directory(config['sync']['backup_dir']):
             raise ValueError("Invalid paths in the configuration file.")
         else:
             logging.info("Configuration file exists and paths are valid.")
