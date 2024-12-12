@@ -1,3 +1,4 @@
+import os
 import toml
 from config import check_config
 from sync import sync_files
@@ -6,7 +7,7 @@ from monitor import monitor_changes_with_watchdog
 if __name__ == "__main__":
     # Load configuration
     check_config()
-    with open('~/.config/ft-sync/config.toml', "r") as config_file:
+    with open(os.path.expanduser('~/.config/ft-sync/config.toml'), "r") as config_file:
         config = toml.load(config_file)
     
     filenames = ['history.db', 'settings.db', 'profiles.db', 'playlists.db']
